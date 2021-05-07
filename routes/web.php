@@ -13,19 +13,19 @@ use App\Http\Controllers\covidController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 Route::get('/search', 'App\Http\Controllers\covidController@search');
-Route::get('/index', 'App\Http\Controllers\covidController@index');
-Route::post('/index', 'App\Http\Controllers\covidController@filterByCountry');
+Route::get('/', 'App\Http\Controllers\covidController@index');
+Route::post('/', 'App\Http\Controllers\covidController@filterByCountry');
 
 require __DIR__.'/auth.php';
