@@ -27,8 +27,8 @@ jobs:
         run: npm install
       - name: Compile assets
         run: npm run production
-      - name: Execute tests
-        run: vendor/bin/phpunit --verbose
+#       - name: Execute tests
+#         run: vendor/bin/phpunit --verbose
       - name: Deploy
         if: github.ref == 'refs/heads/master'
         run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}
