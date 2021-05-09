@@ -21,7 +21,7 @@ use App\Http\Controllers\covidController;
 // })->middleware(['auth'])->name('dashboard');
 
 Route::get('/search', 'App\Http\Controllers\covidController@search');
-Route::get('/', 'App\Http\Controllers\covidController@index');
-Route::post('/', 'App\Http\Controllers\covidController@filterByCountry');
+Route::get('/covid', 'App\Http\Controllers\covidController@index');
+Route::post('/covid', 'App\Http\Controllers\covidController@filterByCountry');
 
 require __DIR__.'/auth.php';
