@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Faker\Provider\ar_JO\Company;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
